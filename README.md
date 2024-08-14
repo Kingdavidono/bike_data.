@@ -14,15 +14,13 @@
 - [ETL](#etl)
   - [Pseudocode](#pseudocode)
 - [Design](#design)
-  - [Mockup](#mockup)
+  - [Dashboard Mockup](#dashboard-mockup)
   - [Tools](#tools)
 - [Visualization](#visualization)
   - [Results](#results)
   - [DAX Measures](#dax-measures)
 - [Analysis](#analysis)
   - [Findings](#findings)
-  - [Validation](#validation)
-  - [Discovery](#discovery)
 - [Recommendations](#recommendations) 
 
 
@@ -105,11 +103,7 @@ on a.yr = b.yr
 
 #### Output
 
-
-
-
-
-
+![SQL queries](assets/images/sql_queries.PNG)
 
 
 
@@ -139,7 +133,6 @@ Some of the data visuals that may be appropriate in answering our questions incl
 
 
 
-![Dashboard-Mockup](assets/images/Bike_data_dashboard.PNG)
 
 
 ## Tools
@@ -150,7 +143,33 @@ Some of the data visuals that may be appropriate in answering our questions incl
 | Excel | Cleaning and exploring the data |
 | SQL Server | Joining multiple tables and analyzing the data |
 | Power BI | Visualize the data via interactive dashboard |
-| Github | Hosting the project documentation and version contol |
+| Github | Hosting the project documentation and version control |
+
+
+# Visualization
+
+
+## Results
+
+  - What does the dashboard look like?
+
+![Power BI Dashboard](assets/images/Bike_data_dashboard.PNG)
+
+
+## DAX Measures
+
+### 1. Profit Margin
+```sql
+Profit Margin = (SUM(Query1[revenue])-SUM(Query1[profit]))/SUM(Query1[profit])
+```
+
+
+# Analysis
+
+## Findings
+
+![Analysis Table](assets/images/analysis_table.PNG)
+
 
 
 
