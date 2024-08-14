@@ -1,4 +1,4 @@
-# Dig-Jit bike shop data
+# Analysis of Dig-Jit bike shop data
 #### Data Portfolio: Excel to Power BI 
 
 
