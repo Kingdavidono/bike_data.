@@ -1,4 +1,5 @@
-# Data Portfolio 2: Excel to Power BI 
+# Dig-Jit bike shop data
+#### Data Portfolio: Excel to Power BI 
 
 
 ![excel-to-powerbi-animated-diagram](assets/images/kaggle_to_powerbi.gif)
