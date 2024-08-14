@@ -19,11 +19,11 @@
 - [Visualization](#visualization)
   - [Results](#results)
   - [DAX Measures](#dax-measures)
--[Analysis](#analysis)
+- [Analysis](#analysis)
   - [Findings](#findings)
   - [Validation](#validation)
   - [Discovery](#discovery)
--[Recommendations](#recommendations) 
+- [Recommendations](#recommendations) 
 
 
 
@@ -73,6 +73,46 @@ Access to our database will be provided. If no database, please create one.
   10. Publish the data to GitHub Pages
 
 
+
+
+### Transform the data
+
+
+```sql
+/*
+# 1. Use UNION to join bike_share_yr_0 & bike_share_yr_1 table
+# 2. Use CTE as subqueries
+# 3. Use left join for the CTE and cost_table on yr
+# 4. Calculate for the revenue and profit column
+*/
+
+
+with CTE as (
+Select * from bike_share_yr_0
+UNION
+Select * from bike_share_yr_1
+)
+
+
+select 
+dteday, season, a.yr, weekday, hr, rider_type, riders, price,COGS,
+riders*price as revenue,
+riders*price - COGS*riders as profit
+from CTE a
+LEFT JOIN cost_table b
+on a.yr = b.yr
+```
+
+#### Output
+
+
+
+
+
+
+
+
+
 # Design
 
 ## Dashboard components required
@@ -99,7 +139,26 @@ Some of the data visuals that may be appropriate in answering our questions incl
 
 
 
-![Dashboard-Mockup](assets/images/
+![Dashboard-Mockup](assets/images/Bike_data_dashboard.PNG)
+
+
+## Tools
+
+
+| Tool | Purpose |
+| --- | --- |
+| Excel | Cleaning and exploring the data |
+| SQL Server | Joining multiple tables and analyzing the data |
+| Power BI | Visualize the data via interactive dashboard |
+| Github | Hosting the project documentation and version contol |
+
+
+
+
+
+
+
+
 
 
 
